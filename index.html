@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wedding Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
-<style>
+ 
+  <style>
 
     * {
 
@@ -17,23 +18,17 @@
 
     }
  
-    body {
+    html, body {
+
+      height: 100%;
+
+      width: 100%;
 
       font-family: Arial, sans-serif;
 
       background: #fff8f0;
 
-      color: #4a3c31;
-
-      min-height: 100vh;
-
-      display: flex;
-
-      justify-content: center;
-
-      align-items: center;
-
-      padding: 2rem 1rem;
+      overflow-x: hidden;
 
     }
  
@@ -41,15 +36,21 @@
 
       position: relative;
 
-      width: 100%;
+      width: 100vw;
 
-      max-width: 500px;
+      height: 100%;
 
-      padding: 2rem;
+      padding: 2rem 1rem;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
 
     }
  
-    .invitation-wrapper img.border {
+    .border-bg {
 
       position: absolute;
 
@@ -57,7 +58,7 @@
 
       left: 0;
 
-      width: 100%;
+      width: 100vw;
 
       height: 100%;
 
@@ -75,9 +76,13 @@
 
       z-index: 2;
 
-      padding: 2rem 1rem;
+      max-width: 500px;
+
+      width: 100%;
 
       text-align: center;
+
+      padding: 2rem 1rem;
 
     }
  
@@ -160,8 +165,8 @@
 </head>
 <body>
 <div class="invitation-wrapper">
-<!-- Replace with your PNG image -->
-<img src="images/flower_border.png" alt="Decorative Border" class="border" />
+<!-- 🖼️ Your full-screen border PNG -->
+<img src="images/final_flower_border.png" alt="Floral Background" class="border-bg" />
  
     <div class="invitation-content">
 <h1 class="invitation">INVITATION</h1>
@@ -199,4 +204,5 @@
 </body>
 </html>
 
+ 
  
