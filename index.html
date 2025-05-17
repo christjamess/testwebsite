@@ -4,10 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wedding Invitation</title>
- 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
- 
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+<style>
 
     * {
 
@@ -27,17 +25,15 @@
 
       color: #4a3c31;
 
+      min-height: 100vh;
+
       display: flex;
 
       justify-content: center;
 
       align-items: center;
 
-      min-height: 100vh;
-
       padding: 2rem 1rem;
-
-      text-align: center;
 
     }
  
@@ -45,17 +41,11 @@
 
       position: relative;
 
-      width: 90vw;
+      width: 100%;
 
-      max-width: 600px;
+      max-width: 500px;
 
-      background: white;
-
-      padding: 4rem 2rem;
-
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-
-      overflow: hidden;
+      padding: 2rem;
 
     }
  
@@ -85,19 +75,25 @@
 
       z-index: 2;
 
+      padding: 2rem 1rem;
+
+      text-align: center;
+
     }
  
     h1.invitation {
 
-      font-size: 3rem;
+      font-size: 2.5rem;
 
       font-weight: 700;
 
       margin-bottom: 1rem;
 
-      letter-spacing: 0.2em;
+      letter-spacing: 0.15em;
 
       color: #a67c52;
+
+      word-break: break-word;
 
     }
  
@@ -105,7 +101,7 @@
 
       font-family: 'Great Vibes', cursive;
 
-      font-size: 2rem;
+      font-size: 1.8rem;
 
       margin-bottom: 1.5rem;
 
@@ -115,32 +111,56 @@
  
     p.date-info {
 
-      font-size: 1.25rem;
-
-      margin-bottom: 3rem;
+      font-size: 1rem;
 
       color: #8c7253;
 
       font-weight: 600;
 
+      margin-bottom: 2rem;
+
+      line-height: 1.6;
+
     }
  
     .flower {
 
-      width: 80vw;
+      width: 80%;
 
-      max-width: 400px;
+      max-width: 300px;
 
       margin: 0 auto;
 
-      user-select: none;
+      display: block;
+
+    }
+ 
+    @media (min-width: 600px) {
+
+      h1.invitation {
+
+        font-size: 3rem;
+
+      }
+
+      p.invite-text {
+
+        font-size: 2rem;
+
+      }
+
+      p.date-info {
+
+        font-size: 1.2rem;
+
+      }
 
     }
 </style>
 </head>
 <body>
 <div class="invitation-wrapper">
-<!-- Decorative Border PNG -->
+<!-- Replace with your PNG image -->
 <img src="images/flower_border.png" alt="Decorative Border" class="border" />
  
     <div class="invitation-content">
