@@ -25,29 +25,19 @@
 
       font-family: Arial, sans-serif;
 
-      background: #fff8f0;
+      background-color: #fff8f0;
+
+      background-image: url("images/flower_border.png");
+
+      background-repeat: no-repeat;
+
+      background-size: contain;
+
+      background-position: center;
+
+      background-attachment: fixed;
 
       overflow-x: hidden;
-
-    }
- 
-    .border-bg {
-
-      position: fixed;
-
-      top: 0;
-
-      left: 0;
-
-      width: 100vw;
-
-      height: 100vh;
-
-      object-fit: cover;
-
-      z-index: 0;
-
-      pointer-events: none;
 
     }
  
@@ -75,6 +65,8 @@
 
       text-align: center;
 
+      background-color: transparent;
+
     }
  
     h1.invitation {
@@ -88,8 +80,6 @@
       letter-spacing: 0.15em;
 
       color: #a67c52;
-
-      word-break: break-word;
 
     }
  
@@ -189,10 +179,7 @@
 </style>
 </head>
 <body>
-<!-- Sticky Floral Background -->
-<img src="images/flower_border.png" alt="Floral Background" class="border-bg" />
- 
-  <div class="invitation-wrapper">
+<div class="invitation-wrapper">
 <div class="invitation-content">
 <h1 class="invitation">INVITATION</h1>
  
@@ -228,7 +215,7 @@
           stroke="#a67c52" stroke-width="3" stroke-linecap="round" />
 </svg>
  
-      <!-- Extra Content for Scrolling -->
+      <!-- Extra Scrollable Content -->
 <div class="extra-section">
 <h2>Reception Details</h2>
 <p>Join us after the ceremony for drinks, dinner, and dancing at the Garden Terrace behind the main hall.</p>
@@ -247,6 +234,7 @@
 </body>
 </html>
 
+ 
  
  
  
