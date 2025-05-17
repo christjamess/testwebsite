@@ -21,11 +21,29 @@
       background: #fff8f0;
       color: #4a3c31;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 2rem 1rem;
       text-align: center;
+    }
+
+    .invitation-container {
+      position: relative;
+      max-width: 600px;
+      width: 100%;
+      padding: 4vw 6vw;
+      background: white;
+      box-sizing: border-box;
+
+      border-style: solid;
+      border-width: 5vw;
+      border-image-source: url('images/flower_border.png');
+      border-image-slice: 40;
+      border-image-repeat: stretch;
+      border-image-width: 1;
+
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     h1.invitation {
@@ -61,6 +79,11 @@
 
     /* Responsive */
     @media (max-width: 600px) {
+      .invitation-container {
+        padding: 6vw 8vw;
+        border-width: 8vw;
+        border-image-slice: 40;
+      }
       h1.invitation {
         font-size: 3rem;
       }
@@ -77,28 +100,31 @@
   </style>
 </head>
 <body>
-  <h1 class="invitation">INVITATION</h1>
+  <div class="invitation-container">
+    <h1 class="invitation">INVITATION</h1>
 
-  <p class="invite-text">
-    You are invited to the wedding celebration of<br />
-    <strong>Tung Sahur &amp; Tralalelo Trala</strong>
-  </p>
+    <p class="invite-text">
+      You are invited to the wedding celebration of<br />
+      <strong>Tung Sahur &amp; Tralalelo Trala</strong>
+    </p>
 
-  <p class="date-info">
-    Saturday, 20th July 2025<br />
-    4:00 PM - 10:00 PM<br />
-    The Grand Garden Hall, City Center
-  </p>
+    <p class="date-info">
+      Saturday, 20th July 2025<br />
+      4:00 PM - 10:00 PM<br />
+      The Grand Garden Hall, City Center
+    </p>
 
-  <!-- Simple flower SVG -->
-  <svg
-    class="flower"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 64 64"
-    fill="#a67c52"
-  >
-    <circle cx="32" cy="32" r="6" />
-    <path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7" stroke="#a67c52" stroke-width="3" stroke-linecap="round"/>
-  </svg>
+    <!-- Simple flower SVG -->
+    <svg
+      class="flower"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      fill="#a67c52"
+    >
+      <circle cx="32" cy="32" r="6" />
+      <path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7" stroke="#a67c52" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
 </body>
 </html>
+
