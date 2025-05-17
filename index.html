@@ -27,17 +27,29 @@
 
       background-color: #fff8f0;
 
-      background-image: url("images/flower_border.png");
-
-      background-repeat: no-repeat;
-
-      background-size: contain;
-
-      background-position: center;
-
-      background-attachment: fixed;
-
       overflow-x: hidden;
+
+    }
+ 
+    /* Flower overlay at front */
+
+    .flower-overlay {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100vw;
+
+      height: 100vh;
+
+      object-fit: cover;
+
+      z-index: 999; /* On top of everything */
+
+      pointer-events: none;
 
     }
  
@@ -53,7 +65,7 @@
 
       padding: 2rem 1rem;
 
-      z-index: 1;
+      z-index: 1; /* Behind flower */
 
     }
  
@@ -61,11 +73,9 @@
 
       position: relative;
 
-      z-index: 2;
+      z-index: 1; /* Behind flower */
 
       text-align: center;
-
-      background-color: transparent;
 
     }
  
@@ -179,7 +189,10 @@
 </style>
 </head>
 <body>
-<div class="invitation-wrapper">
+<!-- 🖼️ Flower image overlay — stays on top -->
+<img src="images/flower_border.png" alt="Floral Overlay" class="flower-overlay" />
+ 
+  <div class="invitation-wrapper">
 <div class="invitation-content">
 <h1 class="invitation">INVITATION</h1>
  
@@ -234,7 +247,5 @@
 </body>
 </html>
 
- 
- 
  
  
