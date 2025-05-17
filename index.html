@@ -31,25 +31,43 @@
 
     }
  
-    /* Flower overlay at front */
+    /* Fixed corner flowers */
 
-    .flower-overlay {
+    .corner {
 
       position: fixed;
+
+      width: 200px;
+
+      pointer-events: none;
+
+      z-index: 999;
+
+    }
+ 
+    .top-left {
 
       top: 0;
 
       left: 0;
 
-      width: 100vw;
+    }
+ 
+    .bottom-right {
 
-      height: 100vh;
+      bottom: 0;
 
-      object-fit: cover;
+      right: 0;
 
-      z-index: 999; /* On top of everything */
+    }
+ 
+    @media (max-width: 600px) {
 
-      pointer-events: none;
+      .corner {
+
+        width: 120px;
+
+      }
 
     }
  
@@ -65,7 +83,7 @@
 
       padding: 2rem 1rem;
 
-      z-index: 1; /* Behind flower */
+      z-index: 1;
 
     }
  
@@ -73,7 +91,7 @@
 
       position: relative;
 
-      z-index: 1; /* Behind flower */
+      z-index: 1;
 
       text-align: center;
 
@@ -189,8 +207,9 @@
 </style>
 </head>
 <body>
-<!-- 🖼️ Flower image overlay — stays on top -->
-<img src="images/flower_border.png" alt="Floral Overlay" class="flower-overlay" />
+<!-- 🌸 Corner floral images -->
+<img src="images/top-left-corner.png" alt="Top Left Flower" class="corner top-left" />
+<img src="images/bottom-right-corner.png" alt="Bottom Right Flower" class="corner bottom-right" />
  
   <div class="invitation-wrapper">
 <div class="invitation-content">
@@ -247,5 +266,6 @@
 </body>
 </html>
 
+ 
  
  
