@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wedding Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
- 
-  <style>
+<style>
 
     * {
 
@@ -32,27 +31,9 @@
 
     }
  
-    .invitation-wrapper {
-
-      position: relative;
-
-      width: 100vw;
-
-      height: 100%;
-
-      padding: 2rem 1rem;
-
-      display: flex;
-
-      justify-content: center;
-
-      align-items: center;
-
-    }
- 
     .border-bg {
 
-      position: absolute;
+      position: fixed;
 
       top: 0;
 
@@ -60,13 +41,29 @@
 
       width: 100vw;
 
-      height: 100%;
+      height: 100vh;
 
       object-fit: cover;
 
-      z-index: 1;
+      z-index: 0;
 
       pointer-events: none;
+
+    }
+ 
+    .invitation-wrapper {
+
+      position: relative;
+
+      width: 100%;
+
+      max-width: 600px;
+
+      margin: 0 auto;
+
+      padding: 2rem 1rem;
+
+      z-index: 1;
 
     }
  
@@ -76,13 +73,7 @@
 
       z-index: 2;
 
-      max-width: 500px;
-
-      width: 100%;
-
       text-align: center;
-
-      padding: 2rem 1rem;
 
     }
  
@@ -134,9 +125,43 @@
 
       max-width: 300px;
 
-      margin: 0 auto;
+      margin: 0 auto 2rem auto;
 
       display: block;
+
+    }
+ 
+    .extra-section {
+
+      margin-top: 2rem;
+
+      text-align: left;
+
+    }
+ 
+    .extra-section h2 {
+
+      margin-bottom: 0.5rem;
+
+      color: #6b4f3f;
+
+    }
+ 
+    .extra-section p {
+
+      margin-bottom: 1.5rem;
+
+      color: #4a3c31;
+
+      line-height: 1.6;
+
+    }
+ 
+    a {
+
+      color: #a67c52;
+
+      text-decoration: underline;
 
     }
  
@@ -164,11 +189,11 @@
 </style>
 </head>
 <body>
-<div class="invitation-wrapper">
-<!-- 🖼️ Your full-screen border PNG -->
-<img src="images/flower_border.png" alt="Floral Background" class="border-bg" />
+<!-- Sticky Floral Background -->
+<img src="images/floral-background.png" alt="Floral Background" class="border-bg" />
  
-    <div class="invitation-content">
+  <div class="invitation-wrapper">
+<div class="invitation-content">
 <h1 class="invitation">INVITATION</h1>
  
       <p class="invite-text">
@@ -186,7 +211,8 @@
         The Grand Garden Hall, City Center
 </p>
  
-      <svg
+      <!-- Decorative flower SVG -->
+<svg
 
         class="flower"
 
@@ -197,12 +223,30 @@
         fill="#a67c52"
 >
 <circle cx="32" cy="32" r="6" />
-<path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7" stroke="#a67c52" stroke-width="3" stroke-linecap="round"/>
+<path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7"
+
+          stroke="#a67c52" stroke-width="3" stroke-linecap="round" />
 </svg>
+ 
+      <!-- Extra Content for Scrolling -->
+<div class="extra-section">
+<h2>Reception Details</h2>
+<p>Join us after the ceremony for drinks, dinner, and dancing at the Garden Terrace behind the main hall.</p>
+ 
+        <h2>Dress Code</h2>
+<p>Formal attire requested — soft florals and warm tones encouraged. The event will be held indoors and partially outdoors, so please dress accordingly.</p>
+ 
+        <h2>Directions</h2>
+<p>The Grand Garden Hall is located at the heart of the City Center. Parking is available on-site. Bus and train stops are within walking distance.</p>
+ 
+        <h2>RSVP</h2>
+<p>Please confirm your attendance by June 30th at <a href="#">example.com/rsvp</a>.</p>
+</div>
 </div>
 </div>
 </body>
 </html>
 
+ 
  
  
