@@ -1,130 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wedding Invitation</title>
-
-  <!-- Wedding-style font -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wedding Invitation</title>
+ 
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
-
+ 
   <style>
-    /* Reset */
+
     * {
+
       margin: 0;
+
       padding: 0;
-      box-sizing: border-box;
-    }
 
+      box-sizing: border-box;
+
+    }
+ 
     body {
+
       font-family: Arial, sans-serif;
+
       background: #fff8f0;
+
       color: #4a3c31;
+
       display: flex;
+
       justify-content: center;
+
       align-items: center;
+
       min-height: 100vh;
+
       padding: 2rem 1rem;
+
       text-align: center;
-    }
 
-    .invitation-container {
+    }
+ 
+    .invitation-wrapper {
+
       position: relative;
+
+      width: 90vw;
+
       max-width: 600px;
-      width: 100%;
-      padding: 4vw 6vw;
+
       background: white;
-      box-sizing: border-box;
 
-      border-style: solid;
-      border-width: 5vw;
-      border-image-source: url('images/flower_border.png');
-      border-image-slice: 40;
-      border-image-repeat: stretch;
-      border-image-width: 1;
+      padding: 4rem 2rem;
 
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+      overflow: hidden;
+
     }
+ 
+    .invitation-wrapper img.border {
 
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      z-index: 1;
+
+      pointer-events: none;
+
+    }
+ 
+    .invitation-content {
+
+      position: relative;
+
+      z-index: 2;
+
+    }
+ 
     h1.invitation {
-      font-size: 4rem;
+
+      font-size: 3rem;
+
       font-weight: 700;
+
       margin-bottom: 1rem;
+
       letter-spacing: 0.2em;
+
       color: #a67c52;
-    }
 
+    }
+ 
     p.invite-text {
+
       font-family: 'Great Vibes', cursive;
+
       font-size: 2rem;
+
       margin-bottom: 1.5rem;
-      max-width: 600px;
-      line-height: 1.3;
+
       color: #6b4f3f;
-    }
 
+    }
+ 
     p.date-info {
+
       font-size: 1.25rem;
-      margin-bottom: 5rem;
-      color: #8c7253;
-      font-weight: 600;
-    }
 
-    .flower {
-      width: 80vw;
-      max-width: 400px;
       margin-bottom: 3rem;
-      user-select: none;
-    }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .invitation-container {
-        padding: 6vw 8vw;
-        border-width: 8vw;
-        border-image-slice: 40;
-      }
-      h1.invitation {
-        font-size: 3rem;
-      }
-      p.invite-text {
-        font-size: 1.5rem;
-      }
-      p.date-info {
-        font-size: 1rem;
-      }
-      .flower {
-        max-width: 300px;
-      }
+      color: #8c7253;
+
+      font-weight: 600;
+
     }
-  </style>
+ 
+    .flower {
+
+      width: 80vw;
+
+      max-width: 400px;
+
+      margin: 0 auto;
+
+      user-select: none;
+
+    }
+</style>
 </head>
 <body>
-  <div class="invitation-container">
-    <h1 class="invitation">INVITATION</h1>
+<div class="invitation-wrapper">
+<!-- Decorative Border PNG -->
+<img src="images/flower_border.png" alt="Decorative Border" class="border" />
+ 
+    <div class="invitation-content">
+<h1 class="invitation">INVITATION</h1>
+ 
+      <p class="invite-text">
 
-    <p class="invite-text">
-      You are invited to the wedding celebration of<br />
-      <strong>Tung Sahur &amp; Tralalelo Trala</strong>
-    </p>
+        You are invited to the wedding celebration of<br />
+<strong>Tung Sahur &amp; Tralalelo Trala</strong>
+</p>
+ 
+      <p class="date-info">
 
-    <p class="date-info">
-      Saturday, 20th July 2025<br />
-      4:00 PM - 10:00 PM<br />
-      The Grand Garden Hall, City Center
-    </p>
+        Saturday, 20th July 2025<br />
 
-    <!-- Simple flower SVG -->
-    <svg
-      class="flower"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      fill="#a67c52"
-    >
-      <circle cx="32" cy="32" r="6" />
-      <path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7" stroke="#a67c52" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-  </div>
+        4:00 PM - 10:00 PM<br />
+
+        The Grand Garden Hall, City Center
+</p>
+ 
+      <svg
+
+        class="flower"
+
+        xmlns="http://www.w3.org/2000/svg"
+
+        viewBox="0 0 64 64"
+
+        fill="#a67c52"
+>
+<circle cx="32" cy="32" r="6" />
+<path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7" stroke="#a67c52" stroke-width="3" stroke-linecap="round"/>
+</svg>
+</div>
+</div>
 </body>
 </html>
 
+ 
